@@ -8,14 +8,11 @@ import java.sql.Statement;
 import connection.ConnectionFactory;
 
 public class App {
-	
-	
-	public static void main(String[] args) {
 		
+	public static void main(String[] args) {		
 		//ConnectionFactory connFactory = new ConnectionFactory();
 		
 		Connection conn = ConnectionFactory.getConnection();
-		
 		
 		try {
 			
