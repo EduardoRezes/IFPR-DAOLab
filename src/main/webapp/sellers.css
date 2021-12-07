@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.seller{
+	width: 100%;
+	background-image: linear-gradient(to right, gray , purple);
+	padding: 5px;	
+}

@@ -26,7 +26,6 @@ public class TestesConexaoDao {
 		System.out.println("=============== Department Teste 1 ==================");
 		DepartmentDao daoDep = DaoFactory.creteDepartmentDAO();
 		List<Department> department = daoDep.
-		*/
-		
+		*/		
 	}
 }
