@@ -3,8 +3,18 @@ package dao;
 import connection.ConnectionFactory;
 
 public class DaoFactory {
-	public static SellerDao createSellerDAO() {
+	
+	public static SellerDao createSellerDao() {
+		
 		SellerDao dao = new SellerDaoJDBC(ConnectionFactory.getConnection());
-		return dao;
+		
+		return dao;		
+	}
+	
+	public static DepartmentDao createDepartmentDao() {
+		
+		DepartmentDao dao = new DepartmentDaoJDBC(ConnectionFactory.getConnection());
+		
+		return dao;		
 	}
 }

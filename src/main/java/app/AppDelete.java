@@ -22,8 +22,7 @@ public class AppDelete {
 			
 			st.executeUpdate();
 				
-		} catch (SQLException e) {
-			
+		} catch (SQLException e) {			
 			throw new DatabaseException(e.getMessage());		
 		}	
 	}	

@@ -10,10 +10,9 @@ public interface DepartmentDao {
 	
 	public void update(Department department);
 	
-	public void deleteById(Department id);
+	public void deleteById(Integer id);
 	
-	public Department findById(Department id);
+	public Department findById(Integer id);
 	
-	public List<Department> findAll();
-	
+	public List<Department> findAll();	
 }
