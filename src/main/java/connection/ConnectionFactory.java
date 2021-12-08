@@ -17,7 +17,7 @@ public class ConnectionFactory {
 		if(connection == null) {
 		
 			try {
-			
+				DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 				connection = DriverManager.getConnection("jdbc:mysql://localhost/mydbCrudSellerDepartment", "root", "root");
 			
 				return connection;
