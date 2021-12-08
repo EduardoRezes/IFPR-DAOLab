@@ -100,7 +100,7 @@
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
 				<div class="input-group">
-    				<input data-datepicker="" class="form-control" id="datebirthday" name="dateUpdate" type="text" placeholder="dd/mm/yyyy">
+    				<input data-datepicker="" class="form-control" id="datebirthday" name="dateUpdate" type="date" placeholder="dd/mm/yyyy" required>
 				</div>	
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
@@ -150,7 +150,12 @@
 			<div class="item">
 			<!-- Ajustar esta mensagem -->
 				<ul>
-					<li><% out.print(seller);%></li>
+				<%-- 	<li class="list-group-item active">Id: <%out.println(seller.getId()); %>
+					<li class="list-group-item">Name: <%out.println(seller.getName());%></li>
+					<li class="list-group-item">E-mail: <%out.println(seller.getEmail());%></li>
+					<li class="list-group-item">BirthDate: <%out.println(seller.getBirthdate());%></li>
+					<li class="list-group-item">Base Salary: <%out.println(seller.getBaseSalary());%></li> --%>
+					<li><%out.print(seller);%></li>
 				</ul>
 			</div>
 		</form>
@@ -159,11 +164,12 @@
 		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/sellerFindAll" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
-				 	<label>List All Seller</label> 
+				 	<label>List All Seller </label>
 				 </div>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
-				<button type="submit" name="idFindAll" class="btn btn-primary mb-3">List</button>
+				<button type="submit" name="idFindAll" class="btn btn-primary mb-3 disabled">List</button>
+				<p class="text-left">Botão desabilitado, pois fundionalidade ainda está sem campo para inserção. [Meapeado para Feature]</p>
 			</div>
 		</form>
 
