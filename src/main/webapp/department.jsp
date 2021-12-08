@@ -1,112 +1,132 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="models.Department"%>  
-<%@ page import="java.util.List"%>  
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="models.Department"%>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CRUD DEPARTMENTS</title>
-<link rel="stylesheet" type="text/css" href="departments.css" media="screen" />
+<title>CRUD - DEPARTMENTS</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
 </head>
-<body>
-
-	<%
-		String msgInsertDepart = (String) request.getAttribute("msgInserDepartAttr");	
-	%>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"> <img src="img/IFPR_logo.png"
+					alt="" width="40" height="30" class="d-inline-block align-text-top">
+					CRUD - SYSTEM
+				</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" aria-current="page"
+							href="seller.jsp">Home</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="seller.jsp">Sellers</a></li>
+						<li class="nav-item"><a class="nav-link" href="department.jsp">Departments</a></li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search"
+							aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
 	
-	<%
-		String msgDeleteDepart = (String) request.getAttribute("msgDeleteAttr");	
-	%>
-		
-	<%
-		String msgUpdateDepart = (String) request.getAttribute("msgUpdateAttr");	
-	%>
-	
-	<%
+		<%
 		Department depart = (Department) request.getAttribute("departAttr");
-	%>
+		%>
 	
-	<h1>Department Manager</h1>
-	
-	<a href="index.jsp"><span>Home</span></a>
-	<br/>
-	<br/>
-	<!-- insert -->
-	<div class="department">
-	<h3>Insert Department</h3>
-		<form method="get" action="${pageContext.request.contextPath}/departmentInsert" enctype="multipart/form-data">
-			<label for="nome-id">Name:</label>
-			<input id="nome-id" type="text" name="nomeInsert"><br /><br />
-			
-			<input type="submit" value="Insert" />
+		<!-- insert -->
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/insert" enctype="multipart/form-data">
+			<div class="col-auto">		
+				 <div class="col-mg-10">
+				 	<label>Insert Department</label> 
+				 </div>
+			</div>
+			<div class="col-auto">
+				<input class="form-control" type="text" id="nome-id" placeholder="Name" aria-label="default input example">
+			</div>
+			<div class="col-auto" style="margin-top: 10px">
+				<button type="submit" class="btn btn-primary mb-3">Submit</button>
+			</div>
 		</form>
-		<br />
-		<span><%= msgInsertDepart %></span>
-	</div>
-	<br />
 	
-	<!-- update -->
-	<div class="department">
-	<h3>Update Department</h3>
-		<form method="get" action="${pageContext.request.contextPath}/departmentUpdate" enctype="multipart/form-data">
-			<label for="id">Id:</label>
-			<input id="id" type="number" name="IdUpdate"><br /><br />
-			
-			<label for="nome-id1">Nome:</label>
-			<input id="nome-id1" type="text" name="nomeUpdate"><br /><br />
-			
-			<input type="submit" value="Update" />
+		<!-- update -->
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/update" enctype="multipart/form-data">
+			<div class="col-auto">		
+				 <div class="col-mg-10">
+				 	<label>Update Department</label> 
+				 </div>
+			</div>
+			<div class="col-auto">
+				<label for="id" >Id:</label> <input class="form-control" type="number" id="id" placeholder="Id" aria-label="default input example">
+				<label for="name-id" >Name:</label> <input class="form-control" type="text" id="name-id" placeholder="Name Updated" aria-label="default input example">
+			</div>
+			<div class="col-auto" style="margin-top: 10px">
+				<button type="submit" class="btn btn-primary mb-3">Update</button>
+			</div>
 		</form>
-		<br />
-		<span><%= msgUpdateDepart %></span>
-	</div>
 	
-	<br />
-	
-	<!-- deleteById -->
-	<div class="department">
-	<h3>Delete Department By Id:</h3>
-		<form method="get" action="${pageContext.request.contextPath}/departmentDelete" enctype="multipart/form-data">
-			<label for="id">Id:</label>
-			<input id="id" type="number" name="IdDelete"><br /><br />
-			
-			<input type="submit" value="Delete" />
+		<!-- delete -->
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/delete" enctype="multipart/form-data">
+			<div class="col-auto">		
+				 <div class="col-mg-10">
+				 	<label>Delete Department</label> 
+				 </div>
+			</div>
+			<div class="col-auto">
+				<label for="id" >Id:</label> <input class="form-control" type="number" id="id" placeholder="Id" aria-label="default input example">
+			</div>
+			<div class="col-auto" style="margin-top: 10px">
+				<button type="submit" class="btn btn-primary mb-3">Delete</button>
+			</div>
 		</form>
-		<br />
-		<span><%= msgDeleteDepart %></span>
-		
-	</div>
 	
-	<br />
-	
-	<!-- findById -->
-	<div class="department">
-	<h3>Find Department By Id:</h3>
-		<form method="get" action="${pageContext.request.contextPath}/departmentFindById" enctype="multipart/form-data">
-			<label for="id">Id:</label>
-			<input id="id" type="number" name="idFind"><br /><br />
-			
-			<input type="submit" value="Find" />
-			<br /> 
+		<!-- findById -->
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentFindById" enctype="multipart/form-data">
+			<div class="col-auto">		
+				 <div class="col-mg-10">
+				 	<label>Find Department</label> 
+				 </div>
+			</div>
+			<div class="col-auto">
+				<label for="id" >Id:</label> <input class="form-control" type="number" id="id" placeholder="Id" aria-label="default input example">
+			</div>
+			<div class="col-auto" style="margin-top: 10px">
+				<button type="submit" class="btn btn-primary mb-3">Find</button>
+			</div>
+			<div class="item">
+				<ul>
+					<li>
+						<%
+						out.print(depart);
+						%>
+					</li>
+				</ul>
+			</div>
 		</form>
-		<div class="item">
-			<ul>	
-				<li><%out.print(depart);%></li>
-			</ul>
-		</div>
-	</div>
 	
-	<br />
-	
-	<!-- findAll -->
-	<div class="department">
-	<h3>List All Departments:</h3>
-		<form method="get" action="${pageContext.request.contextPath}/departmentFindAll" enctype="multipart/form-data">
-
-			<input type="submit" name="idFindAll" value="Listar-todos"><br /><br />
-			<br /> 
+		<!-- findAll -->
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentFindAll" enctype="multipart/form-data">
+			<div class="col-auto">		
+				 <div class="col-mg-10">
+				 	<label>List All Department</label> 
+				 </div>
+			</div>
+			<div class="col-auto" style="margin-top: 10px">
+				<button type="submit" class="btn btn-primary mb-3">List    </button>
+			</div>
 		</form>
-	</div>
-		
-</body>
+	</body>
 </html>
