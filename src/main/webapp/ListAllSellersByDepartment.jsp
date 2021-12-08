@@ -6,23 +6,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>List sellers by Department</title>
 </head>
-<body>
-	<%
-		List<Seller> sellers = (List<Seller>) request.getAttribute("sellerstAttr");
-	%>
-	
-	<h1>Lista de Sellers</h1>
-	<a href="seller.jsp">Seller System</a>
-			<% for(Seller s : sellers){ %>
-			<ul>
-				<li>Id: <%out.println(s.getId()); %>
-				<li>Name: <%out.println(s.getName());%></li>
-				<li>E-mail: <%out.println(s.getEmail());%></li>
-				<li>BirthDate: <%out.println(s.getBirthdate());%></li>
-				<li>Base Salary: <%out.println(s.getBaseSalary());%></li>
-			</ul>
-			<% } %>
-</body>
+	<body>
+		<% List<Seller> sellers = (List<Seller>) request.getAttribute("sellerstAttr"); %>
+		
+		<h1>List Sellers by department</h1>
+		<a href="seller.jsp">Seller System</a>
+				<% for(Seller s : sellers){ %>
+				<ul>
+					<li>Id: <%out.println(s.getId()); %>
+					<li>Name: <%out.println(s.getName());%></li>
+					<li>E-mail: <%out.println(s.getEmail());%></li>
+					<li>BirthDate: <%out.println(s.getBirthdate());%></li>
+					<li>Base Salary: <%out.println(s.getBaseSalary());%></li>
+				</ul>
+				<% } %>
+	</body>
 </html>
