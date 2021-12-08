@@ -34,9 +34,7 @@ public class SellerDaoJDBC implements SellerDao {
 		st.setDate(3, (Date) seller.getBirthdate());
 		st.setDouble(4, seller.getBaseSalary());
 		st.setInt(5, seller.getDepartment().getId());	
-		int rowsAffected = st.executeUpdate();
-		
-		System.out.println("Rows Affected: " + rowsAffected);
+
 		ResultSet ids = st.getGeneratedKeys();
 		
 		ids.next();	
@@ -78,13 +76,9 @@ public class SellerDaoJDBC implements SellerDao {
 	public void deleteById(Integer id) {
 		Connection conn = ConnectionFactory.getConnection();
 		
-		try {
-			
+		try {			
 			PreparedStatement st = conn.prepareStatement("DELETE FROM seller WHERE Id = ?");		
 			st.setInt(1, id);
-			
-			int rowsAffected = st.executeUpdate();			
-			System.out.println("Rows Affected: " + rowsAffected);
 		
 		} catch (SQLException e) {			
 			throw new DatabaseException(e.getMessage());		

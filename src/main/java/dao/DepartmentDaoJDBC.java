@@ -56,8 +56,6 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		try {
 		PreparedStatement st = conn.prepareStatement("INSERT INTO department (Name) VALUES(?)", Statement.RETURN_GENERATED_KEYS);	
 		st.setString(1, department.getName());		
-		int rowsAffected = st.executeUpdate();	
-		System.out.println("Rows Affected: " + rowsAffected);
 
 		ResultSet ids = st.getGeneratedKeys();
 		
@@ -75,10 +73,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			PreparedStatement st = conn.prepareStatement( "UPDATE department SET Name = ? WHERE id = ?");			
 			st.setString(1, department.getName());
 			st.setInt(2, department.getId());
-			
-			int rowsAffected = st.executeUpdate();
-			
-			System.out.println("Rows Affected: " + rowsAffected);			
+
 			conn.commit();			
 		}catch(SQLException e1) {
 			try {
