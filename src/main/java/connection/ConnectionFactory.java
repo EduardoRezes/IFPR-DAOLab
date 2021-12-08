@@ -18,10 +18,10 @@ public class ConnectionFactory {
 		
 			try {
 			
-				connection = DriverManager.getConnection("jdbc:mysql://localhost/mydb", "root", "root");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost/mydbCrudSellerDepartment", "root", "root");
 			
 				return connection;
-				
+			
 			} catch (SQLException e) {
 				throw new DatabaseException(e.getMessage());
 			} 

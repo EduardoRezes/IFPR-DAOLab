@@ -15,6 +15,7 @@
 	crossorigin="anonymous">
 </head>
 	<body>
+		<!-- Header -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#"> <img src="img/IFPR_logo.png"
@@ -34,9 +35,7 @@
 						<li class="nav-item"><a class="nav-link" href="department.jsp">Departments</a></li>
 					</ul>
 					<form class="d-flex">
-						<input class="form-control me-2" type="search" placeholder="Search"
-							aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
+						<button class="btn btn-outline-success" type="submit">Logout</button>
 					</form>
 				</div>
 			</div>
@@ -47,34 +46,31 @@
 		%>	
 
 		<!-- insert -->
-		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/insert" enctype="multipart/form-data">
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/sellerInsert" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
 				 	<label>Insert Seller</label> 
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="text" id="nome"  aria-label="default input example">
-				<label for="floatingInputGrid nome">Name</label>
+				<input class="form-control" type="text" id="name" name="nameInsert"  aria-label="default input example">
+				<label for="floatingInputGrid name">Name</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="email" id="email" aria-label="default input example">
+				<input class="form-control" type="email" id="email" name="emailInsert" aria-label="default input example">
 				<label for="floatingInputGrid email">Email</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
 				<div class="input-group">
-   					<span class="input-group-text">
-       					<svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-   					</span>
-    				<input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>
+    				<input data-datepicker="" class="form-control" id="dateInsert" type="date" name="dateInsert" placeholder="dd/mm/yyyy" required>
 				</div>	
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="number" id="baseSalary" aria-label="default input example">
+				<input class="form-control" type="number" id="baseSalary" name="SalaryInsert" aria-label="default input example">
 				<label for="floatingInputGrid BaseSalary">Base Salary</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="number" id="baseSalary" aria-label="default input example">
+				<input class="form-control" type="number" id="id" name="DepartmentId" aria-label="default input example">
 				<label for="floatingInputGrid id">Department Id</label>
 			</div>
 			
@@ -91,31 +87,28 @@
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="number" id="id"  aria-label="default input example">
+				<input class="form-control" type="number" id="id" name="idUpdate" aria-label="default input example">
 				<label for="floatingInputGrid id">Id</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="text" id="nome"  aria-label="default input example">
-				<label for="floatingInputGrid nome">Name</label>
+				<input class="form-control" type="text" id="nome" name="nameUpdate" aria-label="default input example">
+				<label for="floatingInputGrid name">Name</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="email" id="email" aria-label="default input example">
+				<input class="form-control" type="email" id="email" name="emailUpdate" aria-label="default input example">
 				<label for="floatingInputGrid email">Email</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
 				<div class="input-group">
-   					<span class="input-group-text">
-       					<svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-   					</span>
-    				<input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>
+    				<input data-datepicker="" class="form-control" id="datebirthday" name="dateUpdate" type="text" placeholder="dd/mm/yyyy">
 				</div>	
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="number" id="baseSalary" aria-label="default input example">
+				<input class="form-control" type="number" id="baseSalary" name="SalaryUpdate" aria-label="default input example">
 				<label for="floatingInputGrid BaseSalary">Base Salary</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="number" id="baseSalary" aria-label="default input example">
+				<input class="form-control" type="number" id="id" name="DepartmentIdUpdate" aria-label="default input example">
 				<label for="floatingInputGrid id">Department Id</label>
 			</div>
 			
@@ -132,11 +125,11 @@
 				 </div>
 			</div>
 			<div class="form-floating">
-				<input class="form-control" type="number" id="id" placeholder="Id" aria-label="default input example">
+				<input class="form-control" type="number" id="id" name="IdDeleteSeller" aria-label="default input example" required="required">
 				<label for="id" >Id</label> 
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
-				<button type="submit" class="btn btn-primary mb-3">Delete</button>
+				<button type="submit" class="btn btn-outline-danger mb-3">Delete</button>
 			</div>
 		</form>
 		
@@ -148,13 +141,14 @@
 				 </div>
 			</div>
 			<div class="form-floating">
-				<input class="form-control" type="number" id="id" placeholder="Id" aria-label="default input example">
-				<label for="id" >Id:</label> 
+				<input class="form-control" type="number" id="id" name="idFindSeller" aria-label="default input example">
+				<label for="id" >Id</label> 
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
 				<button type="submit" class="btn btn-primary mb-3">Find</button>
 			</div>
 			<div class="item">
+			<!-- Ajustar esta mensagem -->
 				<ul>
 					<li><% out.print(seller);%></li>
 				</ul>
@@ -169,7 +163,7 @@
 				 </div>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
-				<button type="submit" class="btn btn-primary mb-3">List</button>
+				<button type="submit" name="idFindAll" class="btn btn-primary mb-3">List</button>
 			</div>
 		</form>
 
@@ -180,7 +174,7 @@
 				 	<label>List Seller by Department</label> 
 				 </div>
 				 <div class="form-floating">
-					<input class="form-control" type="number" id="id" placeholder="Id" aria-label="default input example">
+					<input class="form-control" type="number" id="id" name="idDepart" aria-label="default input example">
 					<label for="id" >Id</label> 
 				 </div>
 			</div>
