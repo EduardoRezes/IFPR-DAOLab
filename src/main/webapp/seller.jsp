@@ -52,11 +52,11 @@
 					</div>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="text" id="name" name="nameInsert" aria-label="default input example"> 
+					<input class="form-control" type="text" id="name" name="nameInsert" required> 
 					<label for="floatingInputGrid name">Name</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="email" id="email" name="emailInsert" aria-label="default input example"> 
+					<input class="form-control" type="email" id="email" name="emailInsert" required> 
 					<label for="floatingInputGrid email">Email</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
@@ -65,11 +65,11 @@
 					</div>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="number" id="baseSalary" name="SalaryInsert" aria-label="default input example"> 
+					<input class="form-control" type="number" id="baseSalary" name="SalaryInsert" required> 
 					<label for="floatingInputGrid BaseSalary">Base Salary</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="number" id="id" name="DepartmentId" aria-label="default input example"> 
+					<input class="form-control" type="number" id="id" name="DepartmentId" required> 
 					<label for="floatingInputGrid id">Department Id</label>
 				</div>
 
@@ -86,15 +86,15 @@
 					</div>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="number" id="id" name="idUpdate" aria-label="default input example">
+					<input class="form-control" type="number" id="id" name="idUpdate" required>
 					 <label for="floatingInputGrid id">Id</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="text" id="nome" name="nameUpdate" aria-label="default input example"> 
+					<input class="form-control" type="text" id="nome" name="nameUpdate" required> 
 					<label for="floatingInputGrid name">Name</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="email" id="email" name="emailUpdate" aria-label="default input example"> 
+					<input class="form-control" type="email" id="email" name="emailUpdate" required> 
 					<label for="floatingInputGrid email">Email</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
@@ -103,11 +103,11 @@
 					</div>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="number" id="baseSalary" name="SalaryUpdate" aria-label="default input example"> 
+					<input class="form-control" type="number" id="baseSalary" name="SalaryUpdate" required> 
 						<label for="floatingInputGrid BaseSalary">Base Salary</label>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
-					<input class="form-control" type="number" id="id" name="DepartmentIdUpdate" aria-label="default input example">
+					<input class="form-control" type="number" id="id" name="DepartmentIdUpdate" required>
 					<label for="floatingInputGrid id">Department Id</label>
 				</div>
 
@@ -146,15 +146,17 @@
 				</div>
 			</div>
 			<div class="form-floating">
-				<input class="form-control" type="number" id="id"
-					name="idFindSeller" aria-label="default input example"> <label
-					for="id">Id</label>
+				<input class="form-control" type="number" id="id" name="idFindSeller" required> 
+				<label for="id">Id</label>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
 				<button type="submit" class="btn btn-primary mb-3">Find</button>
 			</div>
 		</form>
 
+		</div>
+		<div class=row>
+		
 		<!-- findAll -->
 		<form class="col shadow p-3 rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/sellerFindAll" enctype="multipart/form-data">
 			<div class="col-auto">
@@ -174,8 +176,8 @@
 					<h3>List Seller by Department</h3>
 				</div>
 				<div class="form-floating">
-					<input class="form-control" type="number" id="id" name="idDepart"
-						aria-label="default input example"> <label for="id">Id</label>
+					<input class="form-control" type="number" id="id" name="idDepart" required> 
+					<label for="id">Id</label>
 				</div>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
