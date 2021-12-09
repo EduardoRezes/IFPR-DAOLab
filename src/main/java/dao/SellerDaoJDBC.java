@@ -33,8 +33,9 @@ public class SellerDaoJDBC implements SellerDao {
 		st.setString(2, seller.getEmail());
 		st.setDate(3, (Date) seller.getBirthdate());
 		st.setDouble(4, seller.getBaseSalary());
-		st.setInt(5, seller.getDepartment().getId());	
-
+		st.setInt(5, seller.getDepartment().getId());
+		
+		st.executeUpdate();
 		ResultSet ids = st.getGeneratedKeys();
 		
 		ids.next();	
@@ -57,10 +58,9 @@ public class SellerDaoJDBC implements SellerDao {
 			st.setInt(5, seller.getDepartment().getId());
 			st.setInt(6, seller.getId());
 			
-			int rowsAffected = st.executeUpdate();
+			st.executeUpdate();		
+			conn.commit();	
 			
-			System.out.println("Rows Affected: " + rowsAffected);		
-			conn.commit();		
 		}catch(SQLException e1) {
 			try {
 				conn.rollback();
@@ -79,6 +79,7 @@ public class SellerDaoJDBC implements SellerDao {
 		try {			
 			PreparedStatement st = conn.prepareStatement("DELETE FROM seller WHERE Id = ?");		
 			st.setInt(1, id);
+			st.executeUpdate();
 		
 		} catch (SQLException e) {			
 			throw new DatabaseException(e.getMessage());		
