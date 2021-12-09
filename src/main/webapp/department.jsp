@@ -13,7 +13,7 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 </head>
-	<body>
+	<body class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#"> <img src="img/IFPR_logo.png"
@@ -113,11 +113,11 @@
 		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentFindAll" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
-				 	<label>List All Department</label> 
+				 	<h3>List All Department</h3> 
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<button type="submit" name="idFindAll" class="btn btn-primary mb-3">List    </button>
+				<button type="submit" name="idFindAll" value="List-all" class="btn btn-primary mb-3">List</button>
 			</div>
 		</form>
 	</body>
