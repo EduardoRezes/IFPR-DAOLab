@@ -20,15 +20,11 @@ public class DepartDeleteServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 		Integer id = Integer.parseInt(req.getParameter("IdDelete"));
 		dao.deleteById(id);
-		
-		 String msg = "Successful Deleting";		
-		 req.setAttribute("msgDeleteAttr",msg);
+	
+		RequestDispatcher disp = req.getRequestDispatcher("department.jsp");
 			
-		 RequestDispatcher disp = req.getRequestDispatcher("department.jsp");
-			
-		 disp.forward(req, resp);			
+		disp.forward(req, resp);			
 	}
 }

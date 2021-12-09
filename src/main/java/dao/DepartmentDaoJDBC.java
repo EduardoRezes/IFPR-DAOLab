@@ -56,10 +56,8 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		try {
 		PreparedStatement st = conn.prepareStatement("INSERT INTO department (Name) VALUES(?)", Statement.RETURN_GENERATED_KEYS);	
 		st.setString(1, department.getName());		
-
-		ResultSet ids = st.getGeneratedKeys();
+		st.executeUpdate();
 		
-		ids.next();
 		}catch(SQLException e1) {
 			throw new DatabaseException(e1.getMessage());
 		}
@@ -74,6 +72,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			st.setString(1, department.getName());
 			st.setInt(2, department.getId());
 
+			st.executeUpdate();
 			conn.commit();			
 		}catch(SQLException e1) {
 			try {
@@ -93,7 +92,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			st.setInt(1, id);			
 			st.executeUpdate();	
 		} catch (SQLException e) {			
-			throw new DatabaseException("O Departamento não pode ser deletado, pois está atrelado a um vendedor. Remova todos os vendedores do departamento primeiro.");			
+			throw new DatabaseException("Some thing bad happened.");			
 		}
 	}
 
