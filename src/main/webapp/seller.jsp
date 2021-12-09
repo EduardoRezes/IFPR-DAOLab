@@ -44,7 +44,7 @@
 
 	<div class="container-fluid pt-5">
 		<div class=row>
-			<!-- insert -->
+			<!------------------------------------------- insert --------------------------------------------->
 			<form class="col shadow p-3 rounded" method="get" action="${pageContext.request.contextPath}/sellerInsert" enctype="multipart/form-data">
 				<div class="col-auto">
 					<div class="col-mg-10">
@@ -99,7 +99,7 @@
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
 					<div class="input-group">
-						<input data-datepicker="" class="form-control" id="datebirthday" name="dateUpdate" type="date" placeholder="dd/mm/yyyy" required>
+						<input data-datepicker="" class="form-control" id="dateUpdate" name="dateUpdate" type="date" placeholder="dd/mm/yyyy" required>
 					</div>
 				</div>
 				<div class="form-floating" style="margin-top: 10px">
