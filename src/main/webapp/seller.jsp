@@ -119,18 +119,17 @@
 	</div>
 
 	<div class=row>
-		<!-- delete -->
-		<form class="col shadow p-3 rounded"
-			style="margin-top: 50px" method="get"
-			action="${pageContext.request.contextPath}/sellerDelete"
-			enctype="multipart/form-data">
+	
+		<!-------------------------------- deleted --------------------------------------------------->
+		<form class="col shadow p-3 rounded" style="margin-top: 50px" method="get"
+			action="${pageContext.request.contextPath}/sellerDelete" enctype="multipart/form-data">
 			<div class="col-auto">
 				<div class="col-mg-10">
 					<h3>Delete Seller</h3>
 				</div>
 			</div>
 			<div class="form-floating">
-				<input class="form-control" type="number" id="id" name="IdDeleteSeller" aria-label="default input example" required> 
+				<input class="form-control" type="number" id="id" name="IdDeleteSeller" required> 
 				<label for="id">Id</label>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
@@ -186,6 +185,28 @@
 				<button type="submit" class="btn btn-primary mb-3">List</button>
 			</div>
 		</form>
+		
+		
+		<!-- Modal -->
+<!-- 		<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="modal-body">
+					  ...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary">Salvar mudanças</button>
+					</div>
+					</div>
+				</div>
+			</div> -->
 	</div>
 </body>
 </html>

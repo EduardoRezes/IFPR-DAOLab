@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,5 +22,8 @@ public class SellerDeleteByIdServlet extends HttpServlet{
 		
 		Integer id = Integer.parseInt(req.getParameter("IdDeleteSeller"));
 		dao.deleteById(id);		
+		
+		RequestDispatcher disp = req.getRequestDispatcher("seller.jsp");
+		disp.forward(req, resp);
 	}
 }
