@@ -163,10 +163,7 @@
 				</div>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
-				<button type="submit" name="idFindAll"
-					class="btn btn-primary mb-3 ">List</button>
-				<p class="text-left">Botão desabilitado, pois fundionalidade
-					ainda está sem campo para inserção. [Meapeado para Feature]</p>
+				<button type="submit" name="idFindAll" value="List-all" class="btn btn-primary mb-3 ">List Sellers</button>
 			</div>
 		</form>
 
