@@ -33,8 +33,6 @@ public class SellerUpdateServlet extends HttpServlet{
 		Double baseSalaryParam = Double.parseDouble(req.getParameter("SalaryUpdate"));
 		Integer departIdParam = Integer.parseInt(req.getParameter("DepartmentIdUpdate"));
 		
-		
-		System.out.println(dateParam);
 		Department d1 = new Department();
 		d1.setId(departIdParam);
 		
