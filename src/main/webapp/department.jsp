@@ -45,11 +45,11 @@
 		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentInsert" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
-				 	<label>Insert Department</label> 
+				 	<h3>Insert Department</h3> 
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="text" id="nome-id" name="nomeInsert"aria-label="default input example">
+				<input class="form-control" type="text" id="nome-id" name="nameInsert">
 				<label for="floatingInputGrid name">Name</label>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
@@ -58,18 +58,18 @@
 		</form>
 	
 		<!-- update -->
-		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/update" enctype="multipart/form-data">
+		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentUpdate" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
-				 	<label>Update Department</label> 
+				 	<h3>Update Department</g3> 
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="number" id="id" name="IdUpdate" aria-label="default input example">
+				<input class="form-control" type="number" id="id" name="IdUpdate">
 				<label for="floatingInputGrid id">Id</label>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">	
-				<input class="form-control" type="text" id="name-id" name="nameUpdate" aria-label="default input example">
+				<input class="form-control" type="text" id="name-id" name="nameUpdate" >
 				<label for="floatingInputGrid name">Name</label>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
@@ -81,15 +81,15 @@
 		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentDelete" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
-				 	<label>Delete Department</label> 
+				 	<h3>Delete Department</h3> 
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="number" id="id" name="IdDelete"aria-label="default input example">
-				<label for="floatingInputGrid id">Id</label>
+				<input class="form-control" type="number" id="IdDelete" name="IdDelete">
+				<label for="id">Id</label>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">
-				<button type="submit" class="btn mb-3 btn-outline-danger">Delete</button>
+				<button type="submit" class="btn mb-3 btn-outline-danger disabled">Delete</button>
 			</div>
 		</form>
 	
@@ -97,11 +97,11 @@
 		<form class="mb-3 column shadow p-3 mb-5 bg-body rounded" style="margin-top: 50px" method="get" action="${pageContext.request.contextPath}/departmentFindById" enctype="multipart/form-data">
 			<div class="col-auto">		
 				 <div class="col-mg-10">
-				 	<label>Find Department</label> 
+				 	<h3>Find Department</h3> 
 				 </div>
 			</div>
 			<div class="form-floating" style="margin-top: 10px">
-				<input class="form-control" type="number" id="id" name="idFind" aria-label="default input example">
+				<input class="form-control" type="number" id="idFind" name="idFind">
 				<label for="floatingInputGrid id">Id</label>
 			</div>
 			<div class="col-auto" style="margin-top: 10px">

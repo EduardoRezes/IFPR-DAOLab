@@ -26,9 +26,6 @@ public class DepartInsertServlet extends HttpServlet {
 		 Department d = new Department();
 		 d.setName(nameInsert);
 		 dao.insert(d);
-		 
-		 String msg = "Registration successful!!";		
-		 req.setAttribute("msgInserDepartAttr",msg);
 			
 		 RequestDispatcher disp = req.getRequestDispatcher("department.jsp");
 			

@@ -28,7 +28,7 @@ public class DepartFindIdServlet extends HttpServlet{
 
 		req.setAttribute("departAttr", d3);
 		
-		RequestDispatcher disp = req.getRequestDispatcher("department.jsp");
+		RequestDispatcher disp = req.getRequestDispatcher("departmentFindById.jsp");
 		
 		disp.forward(req, resp);
 	}
