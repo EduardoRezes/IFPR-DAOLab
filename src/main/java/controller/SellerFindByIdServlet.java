@@ -26,7 +26,7 @@ public class SellerFindByIdServlet extends HttpServlet{
 		
 		req.setAttribute("sellertAttr", seller);
 
-		RequestDispatcher disp = req.getRequestDispatcher("seller.jsp");
+		RequestDispatcher disp = req.getRequestDispatcher("sellerFindById.jsp");
 		
 		disp.forward(req, resp);
 	}
