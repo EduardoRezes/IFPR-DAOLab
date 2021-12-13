@@ -14,3 +14,9 @@
 	object-position: 0 70%;
 	height: 800px; 
 }
+
+footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+}
