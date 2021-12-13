@@ -1,44 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>CRUD - SYSTEM</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-	crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#"> <img src="img/IFPR_logo.png"
-				alt="" width="40" height="30" class="d-inline-block align-text-top">
-				CRUD - SYSTEM
-			</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="seller.jsp">Home</a></li>
-					<li class="nav-item"><a class="nav-link" aria-current="page"
-						href="seller.jsp">Sellers</a></li>
-					<li class="nav-item"><a class="nav-link" href="department.jsp">Departments</a></li>
-				</ul>
-				<form class="d-flex">
-					<button class="btn btn-outline-success" type="submit">Logout</button>
-				</form>
+	<jsp:include page="header.jsp"></jsp:include>
+
+	<div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="img/cute-christmas-background-with-bokeh.jpg" class="d-block w-100 image-carousel">
+			</div>
+			<div class="carousel-item">
+				<img src="img/christmas-greeting-with-garlands-on-a-red-table.jpg" class="d-block w-100 image-carousel2">
+			</div>
+			<div class="carousel-item">
+				<img src="img/man-in-santa-claus-costume-winking.jpg" class="d-block w-100 image-carousel">
 			</div>
 		</div>
-	</nav>
-	<div>
+	</div>
+
+	<main>
 		<section class="vh-100">
 			<div class="container py-5 h-100">
 				<div
@@ -96,6 +86,9 @@
 				</div>
 			</div>
 		</section>
-	</div>
+	</main>
+	<jsp:include page="footer.jsp"></jsp:include>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
