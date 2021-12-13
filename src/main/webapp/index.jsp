@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,18 +17,18 @@
 	<div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="img/cute-christmas-background-with-bokeh.jpg" class="d-block w-100 image-carousel" alt="...">
+				<img src="img/cute-christmas-background-with-bokeh.jpg" class="d-block w-100 image-carousel">
 			</div>
 			<div class="carousel-item">
-				<img src="img/christmas-greeting-with-garlands-on-a-red-table.jpg" class="d-block w-100 image-carousel2" alt="...">
+				<img src="img/christmas-greeting-with-garlands-on-a-red-table.jpg" class="d-block w-100 image-carousel2">
 			</div>
 			<div class="carousel-item">
-				<img src="img/man-in-santa-claus-costume-winking.jpg" class="d-block w-100 image-carousel" alt="...">
+				<img src="img/man-in-santa-claus-costume-winking.jpg" class="d-block w-100 image-carousel">
 			</div>
 		</div>
 	</div>
 
-	<div>
+	<main>
 		<section class="vh-100">
 			<div class="container py-5 h-100">
 				<div
@@ -87,7 +86,8 @@
 				</div>
 			</div>
 		</section>
-	</div>
+	</main>
+	<jsp:include page="footer.jsp"></jsp:include>
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

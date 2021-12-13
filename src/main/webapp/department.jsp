@@ -13,7 +13,7 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 </head>
-	<body class="container-fluid">
+	<body>
 		<jsp:include page="header.jsp"></jsp:include>
 	
 		<main class="container-fluid pt-5">
@@ -115,5 +115,6 @@
 				</div>
 			</form>
 		</main>
+		<jsp:include page="footer.jsp"></jsp:include>
 	</body>
 </html>
