@@ -1,4 +1,4 @@
-![Thumbnail GitHub](https://raw.githubusercontent.com/EduardoRezes/IFPR-DAOLab/main/home.png)
+![Thumbnail GitHub](https://raw.githubusercontent.com/EduardoRezes/IFPR-DAOLab/main/src/main/webapp/img/home.png)
 ## CRUD DAO entre Seller e Department
 
 Este projete tem como finalidade aplicar um crud de seller e department que foram iniciados em sala de aula e com as atividades proposta pelo professor.
@@ -26,3 +26,8 @@ Este projete tem como finalidade aplicar um crud de seller e department que fora
    <img align="center" height="30" width="90" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
    <img align="center" height="30" width="100" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 </div>
+<br>
+
+
+![Thumbnail GitHub](https://raw.githubusercontent.com/EduardoRezes/IFPR-DAOLab/main/src/main/webapp/img/Seller.png)
+![Thumbnail GitHub](https://raw.githubusercontent.com/EduardoRezes/IFPR-DAOLab/main/src/main/webapp/img/department.png)
