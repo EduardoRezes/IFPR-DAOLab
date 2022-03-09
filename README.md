@@ -3,7 +3,7 @@
 
 Este projete tem como finalidade aplicar um crud de seller e department que foram iniciados em sala de aula e com as atividades proposta pelo professor.
 
-## Exemplos de readmes
+## Tecnologias Utilizadas
 
 <details>
   <summary><b>Front-end</b></summary>
