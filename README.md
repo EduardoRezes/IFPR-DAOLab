@@ -3,8 +3,6 @@
 
 Este projete tem como finalidade aplicar um crud de seller e department que foram iniciados em sala de aula e com as atividades proposta pelo professor.
 
-## Tecnologias Utilizadas
-
 <details>
   <summary><b>Front-end</b></summary>
     
